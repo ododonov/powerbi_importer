@@ -1,0 +1,26 @@
+html {
+  text-align: center;
+}
+
+
+input[id = 'code_holder'], [id = 'pass_holder'] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  width: 20%;
+}
+
+input[type = 'button'] {
+  border: none;
+  font-size: 24px;
+  width: 20%;
+  background-color: #DA291A;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+div {
+  margin-top: 10px;
+}
