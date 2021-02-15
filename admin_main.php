@@ -13,9 +13,10 @@
 
   <body>
       <form method = 'POST' action = '' >
-      <input id = 'code_holder'></input>
+      <input id = 'code_holder' autocomplete="off"></input>
       <br>
       <input type = 'button' id = 'import' value = 'Вставить код'></input>
+      <input type = 'button' id = 'delete' value = 'Очистить'></input>
     </form>
     <div id = 'import_box'></div>
   </body>

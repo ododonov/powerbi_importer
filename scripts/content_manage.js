@@ -17,14 +17,26 @@ $(document).ready(function(){
             url: 'scripts/import_content.php',
             data: {code: code},
             success: function(msg){
-              if(msg == 'valid'){
+              if(msg == 'success'){
                 insert_code(code, true);
               }
             }
           });
         }
       });
+
+    $('#delete').click(function(){
+      $.ajax({
+        type: 'POST',
+        url: 'scripts/delete_content.php',
+        success: function(msg){
+          if(msg == 'success'){
+            window.location.href='admin_main.php';
+          }
+        }
+      });
     });
+  });
 
     function insert_code(code, new_flag) {
       if(new_flag){
