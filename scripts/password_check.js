@@ -1,18 +1,31 @@
 $(document).ready(function(){
+    $(document).on('keypress',function(e) {
+      if(e.which == 13) {
+      try_authorize();
+    }
+  });
+
     $('#pass_check').click(function(){
-        var password = $("#pass_holder").val();
-          $.ajax({
-            type: 'POST',
-            url: 'scripts/password_check.php',
-            data: {password: password},
-            success: function(msg){
-              if(msg == 'valid'){
-                window.location.href='main.php'
-              };
-              if(msg == 'invalid'){
-                alert("Неправильный пароль.");
-              }
-            }
-        });
+        try_authorize();
     });
   });
+
+  function try_authorize() {
+    var password = $("#pass_holder").val();
+      $.ajax({
+        type: 'POST',
+        url: 'scripts/password_check.php',
+        data: {password: password},
+        success: function(msg){
+          if(msg == 'admin'){
+            window.location.href='admin_main.php'
+          };
+          if(msg == 'user'){
+            window.location.href='user_main.php'
+          };
+          if(msg == 'invalid'){
+            alert("Неправильный пароль.");
+          }
+        }
+    });
+  }

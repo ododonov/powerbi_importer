@@ -12,11 +12,6 @@
 </head>
 
   <body>
-    <form method = 'POST' action = ''>
-      <input id = 'code_holder'></input>
-      <br>
-      <input type = 'button' id = 'import' value = 'Вставить код'></input>
-    </form>
     <div id = 'import_box'></div>
   </body>
 </html>
