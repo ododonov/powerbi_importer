@@ -36,7 +36,13 @@ $(document).ready(function(){
         }
       });
     });
+
+    $('#exit').click(function(){
+      window.location.href='index.php';
+    });
+    
   });
+
 
     function insert_code(code, new_flag) {
       if(new_flag){

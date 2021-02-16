@@ -12,7 +12,10 @@
 </head>
 
   <body>
-      <form method = 'POST' action = '' >
+    <div class = 'box'>
+      <input type = 'button' id = 'exit' value = 'Выход'></input>
+    </div>
+    <form method = 'POST' action = '' >
       <input id = 'code_holder' autocomplete="off"></input>
       <br>
       <input type = 'button' id = 'import' value = 'Вставить код'></input>

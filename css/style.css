@@ -21,6 +21,18 @@ input[type = 'button'] {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
+input[id = 'exit'] {
+  font-size: 18px;
+  width: 5%;
+  align-self: flex-end;
+}
+
+.box {
+  padding: 5px;
+  background-color: #E8E8E8;
+  text-align: right;
+}
+
 div {
   margin-top: 10px;
 }

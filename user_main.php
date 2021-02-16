@@ -12,6 +12,9 @@
 </head>
 
   <body>
+    <div class = 'box'>
+      <input type = 'button' id = 'exit' value = 'Выход'></input>
+    </div>
     <div id = 'import_box'></div>
   </body>
 </html>
