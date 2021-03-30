@@ -17,7 +17,7 @@ if ($mysqli->connect_errno) {
 }
 
 $res = $mysqli->query("SELECT count(*) FROM users WHERE name = $login");
-$row = mysql_fetch_row($res);
+$row = mysqli_fetch_row($res);
 if ($row[0] > 0)
 {
     $pass_check = $mysqli->query("SELECT password FROM users WHERE name = $login");
