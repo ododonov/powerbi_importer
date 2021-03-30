@@ -11,11 +11,13 @@ $(document).ready(function(){
   });
 
   function try_authorize() {
+    var login = $("#login_holder").val();
     var password = $("#pass_holder").val();
       $.ajax({
         type: 'POST',
         url: 'scripts/password_check.php',
-        data: {password: password},
+        data: {login: login,
+               password: password},
         success: function(msg){
           if(msg == 'admin'){
             window.location.href='admin_main.php'
@@ -24,7 +26,7 @@ $(document).ready(function(){
             window.location.href='user_main.php'
           };
           if(msg == 'invalid'){
-            alert("Неправильный пароль.");
+            alert("Неправильный логин или пароль.");
           }
         }
     });

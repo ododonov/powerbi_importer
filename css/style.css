@@ -3,7 +3,7 @@ html {
 }
 
 
-input[id = 'code_holder'], [id = 'pass_holder'] {
+input[id = 'code_holder'], [id = 'login_holder'] ,[id = 'pass_holder'] {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 24px;

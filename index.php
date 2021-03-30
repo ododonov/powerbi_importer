@@ -18,12 +18,17 @@ session_start();
   <body>
     <img src = media/kpa.png></img>
     <form method = 'POST' action = ''>
+      <input type = 'input'
+             id = 'login_holder'
+             value = 'Логин'></input>
+      <br>
       <input type = 'password'
-             id = 'pass_holder'></input>
+             id = 'pass_holder'
+             value = 'Пароль'></input>
       <br>
       <input type = 'button'
              id = 'pass_check'
-             value = 'Ввести пароль'></input>
+             value = 'Войти'></input>
     </form>
   </body>
 </html>
