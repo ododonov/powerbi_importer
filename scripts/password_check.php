@@ -6,6 +6,7 @@ $username = "powerbi";
 $password = "powerbi";
 $database = "powerbi";
 
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli($servername, $username, $password, $database, 3306);
 
 //проверка логина и пароля, переданных в запросе
