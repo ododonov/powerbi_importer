@@ -15,7 +15,7 @@ $mysqli = new mysqli($servername, $username, $password, $database, 3306);
 if ($mysqli->connect_errno) {
     echo "Error MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
-$query = "SELECT * FROM users WHERE name = $login"
+$query = "SELECT * FROM users WHERE name = $login";
 $result = $mysql_query($query) or die(mysql_eror);
 $info = mysqli_fetch_array($result);
 if ($login == $info['name'] && $password == $info['password'])
