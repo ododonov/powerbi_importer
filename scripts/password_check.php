@@ -1,13 +1,13 @@
 <?php
 //подключение к БД
 
-$servername = "mysql";
-$username = "powerbi";
-$password = "powerbi";
-$database = "powerbi";
+$db_servername = "mysql";
+$db_username = "powerbi";
+$db_password = "powerbi";
+$db_database = "powerbi";
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$mysqli = new mysqli($servername, $username, $password, $database, 3306);
+$mysqli = new mysqli($db_servername, $db_username, $db_password, $db_database, 3306);
 
 //проверка логина и пароля, переданных в запросе
   $login = $_POST['login'];
