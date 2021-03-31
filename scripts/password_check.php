@@ -16,7 +16,7 @@ $mysqli = new mysqli($db_servername, $db_username, $db_password, $db_database, 3
 if ($mysqli->connect_errno) {
     echo "Error MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
-$result = $mysqli->query("SELECT password, is_admin FROM users WHERE name = $login");
+$result = $mysqli->query("SELECT password, is_admin FROM users WHERE name = '$login'");
 $info = mysqli_fetch_array($result);
 if ($password == $info['password'])
   {
