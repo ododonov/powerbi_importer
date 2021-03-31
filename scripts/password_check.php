@@ -10,8 +10,10 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli($db_servername, $db_username, $db_password, $db_database, 3306);
 
 //проверка логина и пароля, переданных в запросе
-  $login = $_POST['login'];
-  $password = $_POST['password'];
+  //$login = $_POST['login'];
+  //$password = $_POST['password'];
+  $login = "admin";
+  $passwrod = "admin";
 
 if ($mysqli->connect_errno) {
     echo "Error MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
