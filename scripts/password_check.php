@@ -16,22 +16,17 @@ if ($mysqli->connect_errno) {
     echo "Error MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
-$res = $mysqli->query("SELECT count(*) FROM users WHERE name = $login");
-$row = mysqli_fetch_row($res);
-if ($row[0] > 0)
-{
-    $pass_check = $mysqli->query("SELECT password FROM users WHERE name = $login");
-    if ($password == $pass_check)
-      {
-      $admin_check = $mysqli->query("SELECT is_admin FROM users WHERE name = $login");
-      if ($admin_check == 1)
-      {
-        echo "admin";
-      }
-      else
-      {
-        echo "user";
-      }
+$res = $mysqli->query("SELECT * FROM users WHERE name = $login");
+$info = mysqli_fetch_array($res);
+if ($login == $info['name'] && $password == $info['password'])
+    {
+    if ($info['is_admin'] == 1)
+    {
+      echo "admin";
+    }
+    else
+    {
+      echo "user";
     }
 }
 else
